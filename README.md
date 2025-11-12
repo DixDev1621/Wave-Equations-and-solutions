@@ -11,7 +11,6 @@ When waves (sound, light, or mechanical) travel through space or a medium, their
 Here, u(x,t) is the displacement (or field) and c is the wave speed.  
 This equation explains how energy or disturbance moves over time and distance — it is the foundation of acoustics, optics, and electromagnetics.  
 
-**Add image after this section:**  
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/463d68f9-c39a-4585-b86a-31fe13cdc4aa" />
 
 ---
@@ -25,8 +24,8 @@ The equation can take different forms depending on dimensions:
 
 Each form follows the same principle — how displacement changes in space and time.  
 
-**Add image after this section:**  
-[Vibrating Membrane (2D Wave Example)](https://www.wolframcloud.com/obj/resourcesystem/published/DemonstrationRepository/deployments/VibrationOfARectangularMembrane/img/VibrationOfARectangularMembrane_Snapshot-1.png)
+<img width="636" height="480" alt="image" src="https://github.com/user-attachments/assets/c74e5f85-c760-4e18-a9df-9995e5e677e3" />
+
 
 ---
 
@@ -41,8 +40,8 @@ For a **sinusoidal (harmonic) wave:**
 
 This describes continuous oscillation like sound, light, or EM waves.  
 
-**Add image after this section:**  
-[Traveling and Standing Waves](https://www.researchgate.net/publication/266602587/figure/fig12/AS%3A675146704621569%401537978926299/A-standing-wave-formed-from-a-right-travelling-wave-z-and-a-left-travelling-wave-z.ppm)
+<img width="761" height="520" alt="image" src="https://github.com/user-attachments/assets/980ae177-c926-485a-961e-4a8815021c0e" />
+
 
 ---
 
@@ -51,8 +50,8 @@ Real systems (like strings or air columns) have boundaries — ends fixed or ope
 This leads to **standing waves** with **nodes and antinodes**.  
 Only certain frequencies fit the length of the medium — these are called **natural frequencies or harmonics**.  
 
-**Add image after this section:**  
-[Standing Wave Pattern (String Fixed at Both Ends)](https://cdn.kastatic.org/ka-perseus-images/e45c33bb944a2f5fd7a853d18fd6f15d05cd0adf.png)
+<img width="1001" height="603" alt="image" src="https://github.com/user-attachments/assets/983e8c0e-48b3-411b-9179-8480ba705912" />
+
 
 ---
 
@@ -64,8 +63,8 @@ In free space, electromagnetic waves also obey a wave equation:
 
 This shows how **electric (E)** and **magnetic (B)** fields propagate together, forming **light waves**.  
 
-**Add image after this section:**  
-[Electromagnetic Wave Propagation Diagram](https://www.researchgate.net/publication/280872394/figure/fig8/AS%3A281003525459968%401444007869148/An-EM-wave-consists-of-2-components-electric-field-and-magnetic-field-oscillating-in.png)
+<img width="500" height="187" alt="image" src="https://github.com/user-attachments/assets/ff1d04c4-57ef-453a-a0e9-23628b49d4ea" />
+
 
 ---
 
@@ -75,8 +74,8 @@ This shows how **electric (E)** and **magnetic (B)** fields propagate together, 
 - **Optics:** laser beams, fiber optics, and light transmission  
 - **Electronics:** transmission lines also follow wave equations (voltage and current waves)  
 
-**Add image after this section:**  
-[Wave Applications Collage](https://www.researchgate.net/publication/271375230/figure/fig1/AS%3A281376348753923%401444096757697/An-EM-propagating-wave-showing-the-E-and-B-fields-as-well-as-the-Poynting-vector-S-EB.png)
+<img width="443" height="240" alt="image" src="https://github.com/user-attachments/assets/5322d113-2e98-40c4-82bd-00cd6b37d3dc" />
+
 
 ---
 
