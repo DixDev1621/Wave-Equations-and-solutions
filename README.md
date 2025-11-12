@@ -1,113 +1,98 @@
-# High-Speed Rail Communication: Transmission Line Applications in Onboard Internet Systems
-# How Transmission Lines Power High-Speed Rail Internet
+# Wave Equations and Their Solutions
 
-# 1. Introduction:
+---
 
-As high-speed trains like India’s Vande Bharat Express and Japan's Shinkansen race across the country at speeds of over 300 km/h, passengers expect uninterrupted Wi-Fi and real-time updates.
-But transmitting stable signals at these speeds poses challenges like signal reflection, impedance mismatch, and electromagnetic interference (EMI). Transmission line theory plays a critical role in ensuring smooth data flow in these harsh environments.
+## 1. Introduction
+When waves (sound, light, or mechanical) travel through space or a medium, their behavior is described by the **wave equation**.
 
-![image](https://github.com/user-attachments/assets/c6801ec3-db98-4639-b8be-22c672e22509)
+**Equation:**  
+`∂²u(x,t)/∂t² = c² ∂²u(x,t)/∂x²`
 
+Here, u(x,t) is the displacement (or field) and c is the wave speed.  
+This equation explains how energy or disturbance moves over time and distance — it is the foundation of acoustics, optics, and electromagnetics.  
 
-# 2. System Overview: Onboard Communication Network:
-# Components involved:
+**Add image after this section:**  
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/463d68f9-c39a-4585-b86a-31fe13cdc4aa" />
 
-Train-mounted antenna (receives 4G/5G satellite/infrastructure signals)
-Router + RF modem in control cabin
-Internal Wi-Fi system in coaches
-Power amplifiers, bandpass filters, and RF splitters
-The RF sections use coaxial cables, microstrip lines, and waveguides, all governed by transmission line principles.
+---
 
-# 3. Reflection Coefficient (Γ):
-![image](https://github.com/user-attachments/assets/8006fc10-ae30-4ff1-a5db-64a7864ac176)
-💡 Real-time use: The train’s rooftop antenna must be impedance matched with the coaxial feed line. Otherwise, reflected signals reduce data quality and affect real-time services like ticket verification, alerts, and entertainment.
-![image](https://github.com/user-attachments/assets/9a6f207a-8113-43ea-b521-886a1ca05a06)
+## 2. Forms of the Wave Equation
+The equation can take different forms depending on dimensions:  
 
+- **1D Wave:** `u_tt = c² u_xx` (string or sound in a pipe)  
+- **2D Wave:** vibration of a drum membrane  
+- **3D Wave:** spherical light or sound propagation  
 
-# 4. VSWR (Voltage Standing Wave Ratio):
-![image](https://github.com/user-attachments/assets/0c749657-e810-467a-9c4a-4a120de2f534)
+Each form follows the same principle — how displacement changes in space and time.  
 
-​A VSWR closer to 1:1 ensures minimal standing wave and reflection. In high-speed rail, low VSWR is critical to maintain stable cellular or satellite connectivity, especially during handoffs between base stations.
-![image](https://github.com/user-attachments/assets/0e9c1475-9477-49ed-9241-79fc87e267ff)
+**Add image after this section:**  
+[Vibrating Membrane (2D Wave Example)](https://www.wolframcloud.com/obj/resourcesystem/published/DemonstrationRepository/deployments/VibrationOfARectangularMembrane/img/VibrationOfARectangularMembrane_Snapshot-1.png)
 
+---
 
-# 5. Return Loss & Insertion Loss:
-![image](https://github.com/user-attachments/assets/96c303a2-0357-4a33-a244-5f279914df96)
+## 3. General Solutions
+The general solution of the 1D wave equation is:  
+`u(x,t) = F(x - ct) + G(x + ct)`
 
-High return loss ensures minimal reflection at connectors and filters
+That means two waves travel in opposite directions — one to the right, one to the left.  
 
-Low insertion loss ensures minimal signal attenuation over long cable runs inside the train coaches
-![image](https://github.com/user-attachments/assets/e1222a37-b029-475a-9147-2072d5683e53)
+For a **sinusoidal (harmonic) wave:**  
+`u(x,t) = A sin(kx - ωt + φ)`
 
+This describes continuous oscillation like sound, light, or EM waves.  
 
-📌 Application: RF modems and amplifiers inside the train compartments are rated for <1.5 dB IL and >20 dB RL for smooth Wi-Fi delivery to passengers.
+**Add image after this section:**  
+[Traveling and Standing Waves](https://www.researchgate.net/publication/266602587/figure/fig12/AS%3A675146704621569%401537978926299/A-standing-wave-formed-from-a-right-travelling-wave-z-and-a-left-travelling-wave-z.ppm)
 
-# 6. S-Matrix Use in Routers and RF Modules:
-![image](https://github.com/user-attachments/assets/88ae88de-b5e4-4845-b825-c00daa9bb8f6)
+---
 
-📍 Use: In train routers and signal boosters, these parameters are used to model duplexers, filters, and amplifier stages. Designers use S-matrix modeling to ensure no signal leak occurs between input/output stages during wireless processing.
-![image](https://github.com/user-attachments/assets/0e187eb6-f6d4-4625-89b6-fb5771093168)
+## 4. Boundary and Initial Conditions
+Real systems (like strings or air columns) have boundaries — ends fixed or open.  
+This leads to **standing waves** with **nodes and antinodes**.  
+Only certain frequencies fit the length of the medium — these are called **natural frequencies or harmonics**.  
 
+**Add image after this section:**  
+[Standing Wave Pattern (String Fixed at Both Ends)](https://cdn.kastatic.org/ka-perseus-images/e45c33bb944a2f5fd7a853d18fd6f15d05cd0adf.png)
 
-# 7. Power Delivered to Load:
-![image](https://github.com/user-attachments/assets/0006468b-7974-4443-bec5-86a717bbe9df)
-Where ,
-𝑎1 is the incident power at the input port.
-🚉 In train systems, RF signal boosters calculate this to optimize transmitted signal strength through coach walls, ensuring each coach gets reliable Wi-Fi without exceeding safe RF limits.
+---
 
-Real-Time Example: Transmission Lines in High-Speed Rail Internet Communication:
-Scenario: You're on Vande Bharat Express
-You're browsing YouTube at 160 km/h in a remote area.
-How is your phone connected to the internet?
+## 5. Wave Equation in Electromagnetics
+In free space, electromagnetic waves also obey a wave equation:  
 
-🔄 The Communication Chain:
-Antenna on top of the train receives 4G/5G signals or satellite link.
+`∇²E = (1/c²) ∂²E/∂t²`  
+`∇²B = (1/c²) ∂²B/∂t²`
 
-The signal travels through coaxial transmission lines to:
+This shows how **electric (E)** and **magnetic (B)** fields propagate together, forming **light waves**.  
 
-RF modem
+**Add image after this section:**  
+[Electromagnetic Wave Propagation Diagram](https://www.researchgate.net/publication/280872394/figure/fig8/AS%3A281003525459968%401444007869148/An-EM-wave-consists-of-2-components-electric-field-and-magnetic-field-oscillating-in.png)
 
-Signal booster (amplifier)
+---
 
-Router
+## 6. Applications
+- **Mechanical Waves:** vibrations on strings, membranes, and air columns  
+- **Electromagnetic Waves:** radio, radar, and communication signals  
+- **Optics:** laser beams, fiber optics, and light transmission  
+- **Electronics:** transmission lines also follow wave equations (voltage and current waves)  
 
-Router distributes internet via Wi-Fi access points inside each coach.
-| Stage                 | Transmission Line Role                              |
-| --------------------- | --------------------------------------------------- |
-| Antenna → Modem       | Uses **coaxial cables** matched to 50Ω              |
-| Amplifier → Router    | **Microstrip lines** used on PCBs (FR4 material)    |
-| Router → Access Point | Controlled **signal split** with low insertion loss |
-| All points            | Require **impedance matching** to reduce reflection |
+**Add image after this section:**  
+[Wave Applications Collage](https://www.researchgate.net/publication/271375230/figure/fig1/AS%3A281376348753923%401444096757697/An-EM-propagating-wave-showing-the-E-and-B-fields-as-well-as-the-Poynting-vector-S-EB.png)
 
-Why is Matching Important Here?
-Imagine the train antenna picks up a signal. If the line from antenna to modem is mismatched:
+---
 
-Signal reflects back → Internet drops
+## 7. Conclusion
+The **wave equation** is the heart of wave motion — explaining how sound, light, and signals travel, reflect, and interact.  
+From the vibration of a guitar string to the transmission of data through fiber optics, this single equation connects physics, communication, and engineering.  
 
-High VSWR → Energy lost, modem overheats
+---
 
-Poor S11 → Power isn’t reaching Wi-Fi
+### Summary of Image Placement
 
-By using transmission line formulas and carefully choosing cable types and lengths, engineers ensure:
-
-Maximum signal power goes to the device
-
-Minimum reflection, especially during handover between towers
-
-Stable high-speed internet, even at 300 km/h
-
-📡 Real-Time Features Enabled by This:
-Live video surveillance upload to control center
-
-GPS + real-time tracking apps
-
-Passenger Wi-Fi
-
-Onboard entertainment streaming
-
-Cloud-based diagnostics of train hardware
-
-# Conclusion:
-From the rooftop antenna to the passenger’s smartphone, every signal flows through a network governed by transmission line theory. These invisible principles ensure real-time, high-speed connectivity in a fast-moving, harsh RF environment.
-
-The next time you stream a movie or check train status mid-journey, you’re riding on the math of Γ, VSWR, and S-parameters.
+| Section | Image | Placement |
+|----------|--------|-----------|
+| Introduction | General wave equation diagram | After intro paragraph |
+| Forms | Vibrating membrane | After explaining 1D–3D forms |
+| Solutions | Traveling and standing waves | After explaining wave solutions |
+| Boundary Conditions | Standing wave pattern | After describing nodes/antinodes |
+| EM Waves | E–B field propagation diagram | After explaining electromagnetic case |
+| Applications | EM wave + energy flow collage | After applications section |
